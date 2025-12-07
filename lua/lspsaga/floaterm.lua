@@ -16,7 +16,7 @@ function term:open_float_terminal(args)
       ctx.cur_win = nil
       ctx.pos = nil
     end
-    return
+    return {}
   end
 
   local cmd = (#args > 0 and args[1]) and args[1]
@@ -84,6 +84,8 @@ function term:open_float_terminal(args)
       end
     end,
   })
+
+  return ctx
 end
 
 return term
